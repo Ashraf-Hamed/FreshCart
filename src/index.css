@@ -1,0 +1,439 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+    background-image: url('./assets/images/light-patten.svg');
+    
+ }
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product {
+    position: relative;
+    
+}
+.product .heart {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+    font-size: 20px;
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+    /* color: red; */
+}
+
+
+
+.product:hover .heart {
+    opacity: 1;
+    transform: translateY(0%);
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+nav  ul li a:first-child i , 
+nav  ul li a:nth-child(2) i ,  
+nav  ul li a:nth-child(3) i ,  
+nav  ul li a:nth-child(4) i ,  
+nav  ul li a:nth-child(5) i  {
+   
+    transition:color all 0.3s ease;
+    
+}
+
+nav  ul li a:first-child i:hover
+ {
+   color: #1877f2 !important;
+}
+
+nav  ul li a:nth-child(2) i:hover {
+    color: #1da1f2 !important;
+}
+nav  ul li a:nth-child(3) i:hover {
+    color: #0a66c2 !important;
+}
+nav  ul li a:nth-child(4) i:hover {
+    color: #ff0000 !important;
+}
+nav  ul li a:nth-child(5) i:hover {
+    color: #405de6 !important;
+}
+
+
+.active {
+  
+    border-bottom: 2px solid var(--main-color) !important;
+    
+}
+
+
+.payment {
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.p-large {
+    padding: 60px ;
+    background-color: #F0F3F2;
+
+}
+
+footer .btn-success {
+    background-color: #08AC0A;
+    color: #fff;
+}
+
+footer hr {
+    border-color: red;
+}
+
+
+
+
+footer .specialStyle {
+    width: 50px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    
+}
+
+.specialStyledelivers {
+    width: 100px;
+   
+}
+
+.bg-featureProducts {
+    background-color: #ddd;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid var(--main-color);
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid var(--light-color);
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+  .bg-featuer {
+    background-color: #eee;
+  }
+
+  .parent {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+  }
+
+
+  .numItem {
+    
+    
+    font-size: 12px;
+    
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right: -8px;
+    border-radius: 50%;
+   
+  }
+
+  .favitem {
+
+
+    
+    font-size: 12px;
+    
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right: -8px;
+    border-radius: 50%;
+  }
+
+  
+
+  .customHeight {
+    height: 400px;
+    object-fit: cover;
+  }
+
+
+  .slick-dots {
+    color: red;
+  }
+
+
+  .network {
+    background-color: #fff;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    box-shadow: var(--shadow);
+    z-index: 99999;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+  }
+
+  .heartIcon {
+    top: 0px;
+    right: 0px;
+  }
+  
+  .badge {
+    top: -10% !important;
+    left: 100%;
+    font-size: 10px !important;
+  }
+  
+  .countBtn:hover {
+    border: 1px solid rgba(17, 78, 109, 0.6);
+  }
+  
+ 
+
+/* Responsive */
+
+
+/* sm */
+
+@media screen and (max-width: 768px) {
+
+
+    
+
+.Cardtitle , .CardPrice {
+    font-size: 14px;
+    
+}
+
+.cart-btn .btn   {
+    font-size: 12px;
+}
+
+
+.cart-btn span {
+    font-size: 14px !important
+};
+
+ .removeALl {
+    
+    width:100% !important;
+}
+
+.col-sm-3 {
+    margin-top: 10px;
+    text-align: center;
+}
+.payment {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.payment .partner , .payment .delivers{
+    width: 100% !important;
+    text-align: center;
+}
+
+.p-large h2  {
+
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.p-large p {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.p-large .input {
+    width: 100% !important;
+    margin-bottom: 10px;
+}
+
+.p-large .shareLink {
+    width: 100%;
+}
+
+
+ul li a {
+width: fit-content;
+}
+
+.navbar-nav .social a i {
+
+    display: none;  
+}
+
+.icon_opration {
+    
+     display: block !important;
+    
+}
+
+.cart , .wishList{
+    margin-top: 50px !important;
+}
+
+.removeItem .btn {
+    font-size: 12px !important;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.control {
+    display: block;
+}
+
+.control .btn , .control a {
+    font-size: 15px !important;
+}
+
+.wishList h3 {
+    font-size: 18px !important;
+    
+}
+
+.wishList .info {
+    flex-direction: column;
+
+}
+
+.wishList .remove {
+    font-size: 12px !important;
+    display: block !important;
+    margin-top: 15px;
+}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .payment {
+        display: flex;
+        flex-direction: column; 
+
+    }
+
+    .payment .partner , .payment .delivers{
+        width: 100% !important;
+    };
+
+   
+    .navbar-nav .social a i {
+
+        background-color: red;
+        display: none  !important;  
+    }
+
+    .cart {
+        margin-top: 50px !important;
+    }
+}
+
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    .navbar-nav .social a i {
+
+        background-color: red;
+        display: none;  
+    }
+}
+/* lg */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar-nav .social a i {
+
+        background-color: red;
+        display: none;  
+    }
+    
+}
